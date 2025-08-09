@@ -74,7 +74,7 @@ struct boss_huhuran : public BossAI
 
     void DamageTaken(Unit*, uint32& /*damage*/, DamageEffectType, SpellSchoolMask) override
     {
-        if (!_berserk && HealthBelowPct(30))
+        if (!_berserk && HealthBelowPct(10))
         {
             DoCastSelf(SPELL_BERSERK, true);
             me->TextEmote(EMOTE_BERSERK);
